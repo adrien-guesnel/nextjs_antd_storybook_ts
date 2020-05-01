@@ -14,10 +14,15 @@
   "dependencies": {
     "next": "^9.3.5",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "typescript": "^3.8.3"
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
-    "@storybook/react": "^5.3.18"
+    "@babel/core": "^7.9.0",
+    "@storybook/addon-info": "^5.3.18",
+    "@storybook/react": "^5.3.18",
+    "babel-loader": "^8.1.0",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "ts-loader": "^7.0.1",
+    "typescript": "^3.8.3"
   }
 }
