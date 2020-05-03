@@ -17,6 +17,33 @@ module.exports = {
         },
       ],
     });
+
+    config.module.rules.push({
+      test: /\.less$/,
+      use: [
+        "style-loader",
+        "css-loader",
+        {
+          loader: "less-loader",
+          options: {
+            lessOptions: {
+              modifyVars: {
+                "primary-color": "red",
+                "link-color": "red",
+                "border-radius-base": "2px",
+              },
+              javascriptEnabled: true,
+            },
+          },
+        },
+      ],
+    });
+
+    config.module.rules.push({
+      test: /\.s[ac]ss$/i,
+      use: ["style-loader", "css-loader", "sass-loader"],
+    });
+
     config.resolve.extensions.push(".ts", ".tsx");
     return config;
   },
