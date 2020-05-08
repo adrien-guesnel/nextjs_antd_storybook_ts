@@ -35,5 +35,8 @@
     "ts-loader": "^7.0.1",
     "typescript": "^3.8.3",
     "webpack": "^4.43.0"
+  },
+  "engines": {
+    "node": ">=12.16.3"
   }
 }
