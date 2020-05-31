@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect } from "react";
+import React, { useEffect, useReducer } from "react";
 
 let reducer = (user, newUser) => {
   if (newUser === null) {
@@ -11,7 +11,7 @@ let reducer = (user, newUser) => {
 };
 
 const initialState = {
-  name: "",
+  name: "John Doe",
 };
 
 let localState = initialState;

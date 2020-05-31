@@ -1,31 +1,16 @@
-import React, { useContext, useState } from "react";
-import Button from "../components/Button";
-import { UserContext } from "../src/UserContext";
-import { Layout } from "antd";
+import { Card } from "antd";
+import Link from "next/link";
+import React from "react";
 
 export default function Index() {
-  const { Content } = Layout;
-  const { user, setUser } = useContext(UserContext);
-  const [name, setName] = useState(user.name);
-
-  function changeUsername() {
-    setUser({ name });
-  }
-
   return (
-    <Layout>
-      <Content style={{ margin: "24px 16px 0" }}>
-        <h1>Hello world {user.name}!</h1>
-        Username :
-        <input
-          placeholder="John"
-          value={name}
-          onChange={(e) => {
-            setName(e.target.value);
-          }}
-        />
-        <Button value="Save" onClick={(e) => changeUsername()}></Button>
-      </Content>
-    </Layout>
+    <Card>
+      <h1>Hello world !</h1>
+      <p>Now, you can develop your own project.</p>
+      <p>
+        Some components are already developed to guide you, for more
+        informations go to <Link href="/infos">Infos page</Link>
+      </p>
+    </Card>
   );
 }
